@@ -1,0 +1,13 @@
+C:\Users\Baptiste\Desktop\IUT\Annee2\Semestre 2\DevMobileIUT\Dev_Mobile_IUT\DevMobileIUT\DevMobileIUT\DevMobileIUT.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
+C:\Users\Baptiste\Desktop\IUT\Annee2\Semestre 2\DevMobileIUT\Dev_Mobile_IUT\DevMobileIUT\DevMobileIUT\DevMobileIUT.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\Baptiste\Desktop\IUT\Annee2\Semestre 2\DevMobileIUT\Dev_Mobile_IUT\DevMobileIUT\DevMobileIUT\DevMobileIUT.iOS\obj\iPhone\Debug\actool\_ProcessedImageAssetsPath.items
+C:\Users\Baptiste\Desktop\IUT\Annee2\Semestre 2\DevMobileIUT\Dev_Mobile_IUT\DevMobileIUT\DevMobileIUT\DevMobileIUT.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\Baptiste\Desktop\IUT\Annee2\Semestre 2\DevMobileIUT\Dev_Mobile_IUT\DevMobileIUT\DevMobileIUT\DevMobileIUT.iOS\obj\iPhone\Debug\ibtool\_ProcessedInterfaceDefinitionsPath.items
+C:\Users\Baptiste\Desktop\IUT\Annee2\Semestre 2\DevMobileIUT\Dev_Mobile_IUT\DevMobileIUT\DevMobileIUT\DevMobileIUT.iOS\obj\iPhone\Debug\coremlc\_PartialAppManifest.items
+C:\Users\Baptiste\Desktop\IUT\Annee2\Semestre 2\DevMobileIUT\Dev_Mobile_IUT\DevMobileIUT\DevMobileIUT\DevMobileIUT.iOS\obj\iPhone\Debug\coremlc\_BundleResourceWithLogicalName.items
+C:\Users\Baptiste\Desktop\IUT\Annee2\Semestre 2\DevMobileIUT\Dev_Mobile_IUT\DevMobileIUT\DevMobileIUT\DevMobileIUT.iOS\obj\iPhone\Debug\coremlc\_ProcessedCoreMLModelsPath.items
+C:\Users\Baptiste\Desktop\IUT\Annee2\Semestre 2\DevMobileIUT\Dev_Mobile_IUT\DevMobileIUT\DevMobileIUT\DevMobileIUT.iOS\obj\iPhone\Debug\_ProcessedBundleResourcesPath.items
+C:\Users\Baptiste\Desktop\IUT\Annee2\Semestre 2\DevMobileIUT\Dev_Mobile_IUT\DevMobileIUT\DevMobileIUT\DevMobileIUT.iOS\obj\iPhone\Debug\_ProcessedContentPath.items
+C:\Users\Baptiste\Desktop\IUT\Annee2\Semestre 2\DevMobileIUT\Dev_Mobile_IUT\DevMobileIUT\DevMobileIUT\DevMobileIUT.iOS\obj\iPhone\Debug\optimized\
+C:\Users\Baptiste\Desktop\IUT\Annee2\Semestre 2\DevMobileIUT\Dev_Mobile_IUT\DevMobileIUT\DevMobileIUT\DevMobileIUT.iOS\obj\iPhone\Debug\DevMobileIUT.iOS.csproj.AssemblyReference.cache
+C:\Users\Baptiste\Desktop\IUT\Annee2\Semestre 2\DevMobileIUT\Dev_Mobile_IUT\DevMobileIUT\DevMobileIUT\DevMobileIUT.iOS\obj\iPhone\Debug\DevMobileIUT.iOS.csproj.CoreCompileInputs.cache

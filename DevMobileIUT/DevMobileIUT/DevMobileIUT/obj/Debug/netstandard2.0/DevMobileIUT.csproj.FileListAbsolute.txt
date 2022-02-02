@@ -1,0 +1,10 @@
+C:\Users\Baptiste\Desktop\IUT\Annee2\Semestre 2\DevMobileIUT\Dev_Mobile_IUT\DevMobileIUT\DevMobileIUT\DevMobileIUT\obj\Debug\netstandard2.0\DevMobileIUT.csproj.AssemblyReference.cache
+C:\Users\Baptiste\Desktop\IUT\Annee2\Semestre 2\DevMobileIUT\Dev_Mobile_IUT\DevMobileIUT\DevMobileIUT\DevMobileIUT\obj\Debug\netstandard2.0\DevMobileIUT.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Baptiste\Desktop\IUT\Annee2\Semestre 2\DevMobileIUT\Dev_Mobile_IUT\DevMobileIUT\DevMobileIUT\DevMobileIUT\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Baptiste\Desktop\IUT\Annee2\Semestre 2\DevMobileIUT\Dev_Mobile_IUT\DevMobileIUT\DevMobileIUT\DevMobileIUT\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Baptiste\Desktop\IUT\Annee2\Semestre 2\DevMobileIUT\Dev_Mobile_IUT\DevMobileIUT\DevMobileIUT\DevMobileIUT\obj\Debug\netstandard2.0\Pages\Page1.xaml.g.cs
+C:\Users\Baptiste\Desktop\IUT\Annee2\Semestre 2\DevMobileIUT\Dev_Mobile_IUT\DevMobileIUT\DevMobileIUT\DevMobileIUT\obj\Debug\netstandard2.0\Pages\Page2.xaml.g.cs
+C:\Users\Baptiste\Desktop\IUT\Annee2\Semestre 2\DevMobileIUT\Dev_Mobile_IUT\DevMobileIUT\DevMobileIUT\DevMobileIUT\obj\Debug\netstandard2.0\Pages\Page3.xaml.g.cs
+C:\Users\Baptiste\Desktop\IUT\Annee2\Semestre 2\DevMobileIUT\Dev_Mobile_IUT\DevMobileIUT\DevMobileIUT\DevMobileIUT\obj\Debug\netstandard2.0\DevMobileIUT.AssemblyInfoInputs.cache
+C:\Users\Baptiste\Desktop\IUT\Annee2\Semestre 2\DevMobileIUT\Dev_Mobile_IUT\DevMobileIUT\DevMobileIUT\DevMobileIUT\obj\Debug\netstandard2.0\DevMobileIUT.AssemblyInfo.cs
+C:\Users\Baptiste\Desktop\IUT\Annee2\Semestre 2\DevMobileIUT\Dev_Mobile_IUT\DevMobileIUT\DevMobileIUT\DevMobileIUT\obj\Debug\netstandard2.0\DevMobileIUT.csproj.CoreCompileInputs.cache
