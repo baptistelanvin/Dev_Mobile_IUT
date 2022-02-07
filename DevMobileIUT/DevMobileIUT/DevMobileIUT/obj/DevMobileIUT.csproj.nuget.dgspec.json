@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Baptiste\\Desktop\\IUT\\Annee2\\Semestre 2\\DevMobileIUT\\Dev_Mobile_IUT\\DevMobileIUT\\DevMobileIUT\\DevMobileIUT\\DevMobileIUT.csproj": {}
+    "C:\\Users\\bapti\\Documents\\iut\\Dev_Mobile_IUT\\DevMobileIUT\\DevMobileIUT\\DevMobileIUT\\DevMobileIUT.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Baptiste\\Desktop\\IUT\\Annee2\\Semestre 2\\DevMobileIUT\\Dev_Mobile_IUT\\DevMobileIUT\\DevMobileIUT\\DevMobileIUT\\DevMobileIUT.csproj": {
+    "C:\\Users\\bapti\\Documents\\iut\\Dev_Mobile_IUT\\DevMobileIUT\\DevMobileIUT\\DevMobileIUT\\DevMobileIUT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Baptiste\\Desktop\\IUT\\Annee2\\Semestre 2\\DevMobileIUT\\Dev_Mobile_IUT\\DevMobileIUT\\DevMobileIUT\\DevMobileIUT\\DevMobileIUT.csproj",
+        "projectUniqueName": "C:\\Users\\bapti\\Documents\\iut\\Dev_Mobile_IUT\\DevMobileIUT\\DevMobileIUT\\DevMobileIUT\\DevMobileIUT.csproj",
         "projectName": "DevMobileIUT",
-        "projectPath": "C:\\Users\\Baptiste\\Desktop\\IUT\\Annee2\\Semestre 2\\DevMobileIUT\\Dev_Mobile_IUT\\DevMobileIUT\\DevMobileIUT\\DevMobileIUT\\DevMobileIUT.csproj",
-        "packagesPath": "C:\\Users\\Baptiste\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Baptiste\\Desktop\\IUT\\Annee2\\Semestre 2\\DevMobileIUT\\Dev_Mobile_IUT\\DevMobileIUT\\DevMobileIUT\\DevMobileIUT\\obj\\",
+        "projectPath": "C:\\Users\\bapti\\Documents\\iut\\Dev_Mobile_IUT\\DevMobileIUT\\DevMobileIUT\\DevMobileIUT\\DevMobileIUT.csproj",
+        "packagesPath": "C:\\Users\\bapti\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bapti\\Documents\\iut\\Dev_Mobile_IUT\\DevMobileIUT\\DevMobileIUT\\DevMobileIUT\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Baptiste\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\bapti\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -52,11 +48,11 @@
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.7.0, )"
+              "version": "[1.7.1, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[5.0.0.2196, )"
+              "version": "[5.0.0.2337, )"
             }
           },
           "imports": [
