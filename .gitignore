@@ -1,3 +1,7 @@
-/DevMobileIUT/obj
-/DevMobileIUT.Android/obj
-/DevMobileIUT.IOS/obj
+/DevMobileIUT/DevMobileIUT/DevMobileIUT/obj
+/DevMobileIUT/DevMobileIUT/DevMobileIUT.Android/obj
+/DevMobileIUT/DevMobileIUT/DevMobileIUT.IOS/obj
+
+/DevMobileIUT/DevMobileIUT/DevMobileIUT/bin
+/DevMobileIUT/DevMobileIUT/DevMobileIUT.Android/bin
+/DevMobileIUT/DevMobileIUT/DevMobileIUT.IOS/bin
