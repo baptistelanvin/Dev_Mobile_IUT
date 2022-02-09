@@ -4,7 +4,7 @@
              x:Class="DevMobileIUT.Pages.Rechercher">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="SQSDSQDQDSE"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
