@@ -4,6 +4,11 @@
              x:Class="DevMobileIUT.Pages.Accueil">
     <ContentPage.Content>
         <StackLayout>
+            <Grid>
+                <Image Source="lanvin.png"/>
+                <Image Source="posseme.png"/>
+            </Grid>
+            
             <Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />

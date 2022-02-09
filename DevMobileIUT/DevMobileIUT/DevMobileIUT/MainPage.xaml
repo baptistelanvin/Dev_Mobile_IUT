@@ -4,23 +4,26 @@
        x:Class="DevMobileIUT.MainPage">
 
     <TabBar>
-        <ShellContent Title="Accueil">
-            <pages:Accueil></pages:Accueil>
-        </ShellContent>
-
-
-        <ShellContent Title="Top France">
-            <pages:TopFrance></pages:TopFrance>
-        </ShellContent>
-
-        <ShellContent Title="Ajouter">
-            <pages:Ajouter></pages:Ajouter>
-        </ShellContent>
-
-        <ShellContent Title="Rechercher">
-            <pages:Rechercher></pages:Rechercher>
-        </ShellContent>
-
+        <Tab Title="Accueil" Icon="accueil.png">
+            <ShellContent>
+                <pages:Accueil></pages:Accueil>
+            </ShellContent>
+        </Tab>
+        <Tab Title="Top France" Icon="topfrance.png">
+            <ShellContent>
+                <pages:TopFrance></pages:TopFrance>
+            </ShellContent>
+        </Tab>
+        <Tab Title="Ajouter" Icon="ajouter.png">
+            <ShellContent>
+                <pages:Ajouter></pages:Ajouter>
+            </ShellContent>
+        </Tab>
+        <Tab Title="Rechercher" Icon="loupe.png">
+            <ShellContent >
+                <pages:Rechercher></pages:Rechercher>
+            </ShellContent>
+        </Tab>
     </TabBar>
     
 </Shell>
