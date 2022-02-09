@@ -16,19 +16,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Pages\Films.xaml.cs">
-      <DependentUpon>Films.xaml</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="Pages\Page1.xaml">
+    <EmbeddedResource Update="Pages\Accueil.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\Films.xaml">
+    <EmbeddedResource Update="Pages\Ajouter.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\Page3.xaml">
+    <EmbeddedResource Update="Pages\Rechercher.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\TopFrance.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

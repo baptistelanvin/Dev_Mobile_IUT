@@ -4,18 +4,23 @@
        x:Class="DevMobileIUT.MainPage">
 
     <TabBar>
-        <ShellContent Title="Salut">
-            <pages:Page1></pages:Page1>
+        <ShellContent Title="Accueil">
+            <pages:Accueil></pages:Accueil>
         </ShellContent>
 
 
-        <ShellContent Title="Films">
-            <pages:Page2></pages:Page2>
+        <ShellContent Title="Top France">
+            <pages:TopFrance></pages:TopFrance>
         </ShellContent>
 
-        <ShellContent Title="zsqdsqdsq">
-            <pages:Page3></pages:Page3>
+        <ShellContent Title="Ajouter">
+            <pages:Ajouter></pages:Ajouter>
         </ShellContent>
+
+        <ShellContent Title="Rechercher">
+            <pages:Rechercher></pages:Rechercher>
+        </ShellContent>
+
     </TabBar>
     
 </Shell>
