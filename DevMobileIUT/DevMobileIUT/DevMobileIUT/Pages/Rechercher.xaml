@@ -4,9 +4,7 @@
              x:Class="DevMobileIUT.Pages.Rechercher">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="SQSDSQDQDSE"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Entry Placeholder="Rechercher un titre" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
