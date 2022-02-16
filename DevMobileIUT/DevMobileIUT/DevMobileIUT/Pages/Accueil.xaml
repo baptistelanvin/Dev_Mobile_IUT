@@ -3,15 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DevMobileIUT.Pages.Accueil">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Margin="20">
+
+            <Label FontSize="16" Margin="20, 0,20,0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum posuere velit eget volutpat. Mauris ut ultricies leo. Ut luctus nisi in dictum accumsan. Pellentesque habitant morbi tristique rerit, bibendum turpis sed, pharetra dolor.</Label>
+            
             <Grid>
-                <Image Source="lanvin.png"/>
-                <Image Source="posseme.png"/>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="300" />
+                    <RowDefinition Height="30" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" HorizontalTextAlignment="Center" Grid.ColumnSpan="2" FontAttributes="Bold" FontSize="34" Text="Les créateurs"/>
+                <Image Grid.Column="0" Grid.Row="1" Source="lanvin.png" Aspect="AspectFit"/>
+                <Label Text="Baptiste Lanvin"  FontSize="20" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="2"/>
+                <Image Grid.Column="1" Grid.Row="1" Source="posseme.png" Aspect="AspectFit"/>
+                <Label Text="Baptiste Posseme" FontSize="20" HorizontalTextAlignment="Center" Grid.Column="1" Grid.Row="2"/>
+
             </Grid>
             
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

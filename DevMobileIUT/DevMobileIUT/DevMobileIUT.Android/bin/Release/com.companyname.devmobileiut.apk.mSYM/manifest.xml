@@ -1,11 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <mono-debug version="1">
   <app-id>com.companyname.devmobileiut</app-id>
-<<<<<<< HEAD
-  <build-date>2022-02-09T16:25:04.8200918Z</build-date>
-  <build-id>be893902-21b9-4dd7-ab7d-54703e92cb8a</build-id>
-=======
-  <build-date>2022-02-09T15:30:18.5702256Z</build-date>
-  <build-id>57fcc3ae-369a-47df-a6dc-d605da7a3e4e</build-id>
->>>>>>> 352e2c676cd88a237f4cf56032c3b217950108ab
+  <build-date>2022-02-16T16:20:30.1865891Z</build-date>
+  <build-id>692f8043-4fb3-470a-810d-d79639506f0d</build-id>
 </mono-debug>
