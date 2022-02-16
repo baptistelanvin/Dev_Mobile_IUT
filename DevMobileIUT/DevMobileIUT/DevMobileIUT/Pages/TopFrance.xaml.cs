@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevMobileIUT.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace DevMobileIUT.Pages
         public TopFrance()
         {
             InitializeComponent();
+            BindingContext = SpotifyViewModel.Instance;
         }
     }
 }
