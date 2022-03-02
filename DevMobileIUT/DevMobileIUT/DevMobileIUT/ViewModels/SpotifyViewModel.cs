@@ -11,6 +11,7 @@ namespace DevMobileIUT.ViewModels
     {
         private static SpotifyViewModel _instance = new SpotifyViewModel();
         public static SpotifyViewModel Instance { get { return _instance; } }
+        SpotifyClient spotifyclient;
 
         public ObservableCollection<Musique> ListOfMusiques
         {
@@ -30,23 +31,32 @@ namespace DevMobileIUT.ViewModels
             initList();
         }
 
-        private void initList()
+        private async void initList()
         {
-           for (int i = 0; i < 10; i++)
+            ListOfMusiques = new ObservableCollection<Musique>();
+            FullPlaylist playlist = await spotifyclient.Playlists.Get("37i9dQZEVXbIPWwFssbupI");
+            foreach (PlaylistTrack<IPlayableItem> item in playlist.Tracks.Items)
             {
-                
-            }
-            
-            var music1 = new Musique();
-            music1.Titre = "zkzskzskzk";
+                if (item.Track is FullTrack track)
+                {
+                    Console.WriteLine(track.Name);
+                    ListOfMusiques.Add(new Musique()
+                    {
+                        Titre = track.Name,
+                        Album = track.Album.Name,
+                        Artiste = track.Album.Artists[0].Name,
+                        Annee = track.Album.ReleaseDate,
+                        Pochette = track.Album.Images[0].Url,
 
-            ListOfMusiques.Add(music1);
+                    });
+                }
+            }
         }
 
-        private void connectSpotifyAPI()
+        private  void connectSpotifyAPI()
         {
-            var spotify = new SpotifyClient("BQCY_96tfwifmX97Ntet35E_-rt9YQ3IvjbOfoQXzfNvSqsz87vVU7KS675_Pg0vJhhHZ4ulFUj9Ga8tuq-8TQJXt2eorfG6Xwxm6OOsOAZ_DlfGD92tOHaDbnr9ipZlMoSbSunJiaRKrJyCt3ZHN91MpyQZbX7a4MF29A");
- 
+            spotifyclient = new SpotifyClient("BQAWm8-R-CV2tyrTkBQ1KH-H3NtKWBJAWV_1duOPaZDJVndEDdsqb-oJMFMVgIioWzZ-I_Qk18_1qmMmt-r5-0tPhjm32J8Ie6OhpJNj1-izL16dqqib-6ZwKZqtsMdBrMC7SNMFtMwq9JHBj908Milkwp5Xq61ikoRmfg");
+            
         }
     }
 }

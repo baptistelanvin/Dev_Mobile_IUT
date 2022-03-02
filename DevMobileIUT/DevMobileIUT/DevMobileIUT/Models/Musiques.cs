@@ -10,6 +10,7 @@ namespace DevMobileIUT.Models
         public string Artiste { get; set; }
         public string Album { get; set; }
         public string Annee { get; set; }
+        public string Pochette { get; set; }
 
     }
 }
