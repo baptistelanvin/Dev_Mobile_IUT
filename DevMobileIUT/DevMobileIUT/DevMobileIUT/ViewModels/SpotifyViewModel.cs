@@ -24,6 +24,17 @@ namespace DevMobileIUT.ViewModels
                 SetValue(value);
             }
         }
+        public ObservableCollection<Musique> ListOfResults
+        {
+            get
+            {
+                return GetValue<ObservableCollection<Musique>>();
+            }
+            set
+            {
+                SetValue(value);
+            }
+        }
 
         public SpotifyViewModel()
         {
@@ -39,7 +50,6 @@ namespace DevMobileIUT.ViewModels
             {
                 if (item.Track is FullTrack track)
                 {
-                    Console.WriteLine(track.Name);
                     ListOfMusiques.Add(new Musique()
                     {
                         Titre = track.Name,
@@ -53,9 +63,25 @@ namespace DevMobileIUT.ViewModels
             }
         }
 
+        private async void search()
+        {
+            var query = "Zipette";
+            ListOfResults = new ObservableCollection<Musique>();
+            var search = await spotifyclient.Search.Item(new SearchRequest(SearchRequest.Types.Track, query));
+            foreach (var item in search.Tracks.Items)
+            {
+                ListOfResults.Add(new Musique()
+                {
+                    Titre = item.Name,
+                });
+            }
+        }
+
+
         private  void connectSpotifyAPI()
         {
-            spotifyclient = new SpotifyClient("BQAWm8-R-CV2tyrTkBQ1KH-H3NtKWBJAWV_1duOPaZDJVndEDdsqb-oJMFMVgIioWzZ-I_Qk18_1qmMmt-r5-0tPhjm32J8Ie6OhpJNj1-izL16dqqib-6ZwKZqtsMdBrMC7SNMFtMwq9JHBj908Milkwp5Xq61ikoRmfg");
+            var config = SpotifyClientConfig.CreateDefault().WithAuthenticator(new ClientCredentialsAuthenticator("4ca27c28962d4d86b36f9e85d6f97fc0", "6eeef680576c4ddb829f8f20b4006809"));
+            spotifyclient = new SpotifyClient(config);
             
         }
     }

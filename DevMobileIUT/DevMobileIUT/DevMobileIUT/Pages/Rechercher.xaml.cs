@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using DevMobileIUT.ViewModels;
 
 namespace DevMobileIUT.Pages
 {
@@ -16,6 +17,7 @@ namespace DevMobileIUT.Pages
         public Rechercher()
         {
             InitializeComponent();
+            BindingContext = SpotifyViewModel.Instance;
         }
     }
 }
