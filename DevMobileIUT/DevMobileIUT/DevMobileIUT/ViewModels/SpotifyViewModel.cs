@@ -56,7 +56,7 @@ namespace DevMobileIUT.ViewModels
                         Album = track.Album.Name,
                         Artiste = track.Album.Artists[0].Name,
                         Annee = track.Album.ReleaseDate,
-                        Pochette = track.Album.Images[0].Url,
+                        Pochette = track.Album.Images[1].Url,
 
                     });
                 }
