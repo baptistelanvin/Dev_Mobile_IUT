@@ -46,20 +46,23 @@ namespace DevMobileIUT.ViewModels
         {
             ListOfMusiques = new ObservableCollection<Musique>();
             FullPlaylist playlist = await spotifyclient.Playlists.Get("37i9dQZEVXbIPWwFssbupI");
+            int compteur = 1;
             foreach (PlaylistTrack<IPlayableItem> item in playlist.Tracks.Items)
             {
                 if (item.Track is FullTrack track)
                 {
                     ListOfMusiques.Add(new Musique()
                     {
+                        ID = compteur,
                         Titre = track.Name,
                         Album = track.Album.Name,
                         Artiste = track.Album.Artists[0].Name,
                         Annee = track.Album.ReleaseDate,
                         Pochette = track.Album.Images[0].Url,
-
                     });
+                    compteur++;
                 }
+                
             }
         }
 
