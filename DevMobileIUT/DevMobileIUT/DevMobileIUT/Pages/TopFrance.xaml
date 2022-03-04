@@ -6,10 +6,17 @@
         <CollectionView ItemsSource="{Binding ListOfMusiques}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <!--
-                    <Label Text="{Binding Titre}"/>-->
+                    <FlexLayout>
+                        <Label Text="{Binding Titre}"/>
+                        <Label Text="{Binding Artiste}"/>
+                        <Label Text="{Binding Album}"/>
+                        <Label Text="{Binding Annee}"/>
+                        <Label Text="{Binding Pochette}"/>
+                    </FlexLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
     </ContentPage.Content>
 </ContentPage>
+
+
