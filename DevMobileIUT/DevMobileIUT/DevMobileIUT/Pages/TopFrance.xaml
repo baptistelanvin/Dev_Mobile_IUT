@@ -7,11 +7,28 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <FlexLayout>
-                        <Label Text="{Binding Titre}"/>
-                        <Label Text="{Binding Artiste}"/>
-                        <Label Text="{Binding Album}"/>
-                        <Label Text="{Binding Annee}"/>
-                        <Label Text="{Binding Pochette}"/>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="75" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="20" />
+                                <ColumnDefinition Width="75" />
+                                <ColumnDefinition Width="100" />
+                                <ColumnDefinition Width="100" />
+                                <ColumnDefinition Width="100" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding ID}"/>
+                            <Label Grid.Column="2" Text="{Binding Titre}"/>
+                            <Label Grid.Column="2" Text="{Binding Artiste}"/>
+                            <Label Grid.Column="3" Text="{Binding Album}"/>
+                            <Label Grid.Column="4" Text="{Binding Annee}"/>
+                            <Image WidthRequest="75" HeightRequest="75" Grid.Column="1" Aspect="AspectFit">
+                                <Image.Source>
+                                    <UriImageSource Uri="{Binding Pochette}"/>
+                                </Image.Source>
+                            </Image>
+                        </Grid>
                     </FlexLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
