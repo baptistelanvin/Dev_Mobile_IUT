@@ -32,6 +32,7 @@ namespace DevMobileIUT.ViewModels
 
         private void initList()
         {
+            /*
            for (int i = 0; i < 10; i++)
             {
                 
@@ -40,12 +41,13 @@ namespace DevMobileIUT.ViewModels
             var music1 = new Musique();
             music1.Titre = "zkzskzskzk";
 
-            ListOfMusiques.Add(music1);
+            ListOfMusiques.Add(music1); 
+            */
         }
 
         private void connectSpotifyAPI()
         {
-            var spotify = new SpotifyClient("BQCY_96tfwifmX97Ntet35E_-rt9YQ3IvjbOfoQXzfNvSqsz87vVU7KS675_Pg0vJhhHZ4ulFUj9Ga8tuq-8TQJXt2eorfG6Xwxm6OOsOAZ_DlfGD92tOHaDbnr9ipZlMoSbSunJiaRKrJyCt3ZHN91MpyQZbX7a4MF29A");
+            var spotify = new SpotifyClient("BQCY_96tfawifmX97Ntet35E_-rt9YQ3IvjbOfoQXzfNvSqsz87vVU7KS675_Pg0vJhhHZ4ulFUj9Ga8tuq-8TQJXt2eorfG6Xwxm6OOsOAZ_DlfGD92tOHaDbnr9ipZlMoSbSunJiaRKrJyCt3ZHN91MpyQZbX7a4MF29A");
  
         }
     }

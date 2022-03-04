@@ -6,7 +6,8 @@
         <CollectionView ItemsSource="{Binding ListOfMusiques}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Label Text="{Binding Titre}"/>
+                    <!--
+                    <Label Text="{Binding Titre}"/>-->
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
