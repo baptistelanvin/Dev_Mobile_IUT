@@ -6,6 +6,7 @@ namespace DevMobileIUT.Models
 {
     public class Musique
     {
+        public int ID { get; set; }
         public string Titre { get; set; }
         public string Artiste { get; set; }
         public string Album { get; set; }
