@@ -51,13 +51,14 @@ namespace DevMobileIUT.ViewModels
             {
                 if (item.Track is FullTrack track)
                 {
+                    string anneeChaineEntière = track.Album.ReleaseDate;
                     ListOfMusiques.Add(new Musique()
                     {
                         ID = compteur,
                         Titre = track.Name,
                         Album = track.Album.Name,
                         Artiste = track.Album.Artists[0].Name,
-                        Annee = track.Album.ReleaseDate,
+                        Annee = anneeChaineEntière.Substring(0,4),
                         Pochette = track.Album.Images[0].Url,
                     });
                     compteur++;

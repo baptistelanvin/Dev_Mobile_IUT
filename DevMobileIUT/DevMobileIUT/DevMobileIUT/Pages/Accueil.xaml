@@ -2,9 +2,10 @@
 <ContentPage 
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DevMobileIUT.Pages.Accueil">
+             x:Class="DevMobileIUT.Pages.Accueil"
+             BackgroundColor="Black" Shell.TitleColor="White" Title="Accueil">
     <ContentPage.Content>
-        <StackLayout Margin="20">
+        <StackLayout Margin="20, 10, 20, 10" BackgroundColor="Black">
 
             <Grid>
                 <Grid.RowDefinitions>
@@ -18,7 +19,7 @@
                 <Image Grid.Column="0" WidthRequest="100" Grid.Row="0" Source="logo1.png"/>
                 <Label Grid.Column="1" Grid.Row="0" FontSize="50" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#0017E8">Spofity</Label>
             </Grid>
-            <Label FontSize="16" Margin="20, 0,20,0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum posuere velit eget volutpat. Mauris ut ultricies leo. Ut luctus nisi in dictum accumsan. Pellentesque habitant morbi tristique rerit, bibendum turpis sed, pharetra dolor.</Label>
+            <Label TextColor="White" FontSize="16" Margin="20, 0,20,0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum posuere velit eget volutpat. Mauris ut ultricies leo. Ut luctus nisi in dictum accumsan. Pellentesque habitant morbi tristique rerit, bibendum turpis sed, pharetra dolor.</Label>
             
             <Grid>
                 <Grid.RowDefinitions>
@@ -30,11 +31,11 @@
                     <ColumnDefinition Width="2*" />
                     <ColumnDefinition Width="2*" />
                 </Grid.ColumnDefinitions>
-                <Label Grid.Row="0" HorizontalTextAlignment="Center" Grid.ColumnSpan="2" FontFamily="GothamBold" FontSize="34" Text="Les créateurs"/>
+                <Label Grid.Row="0" HorizontalTextAlignment="Center" Grid.ColumnSpan="2" FontFamily="GothamBold" FontSize="34" TextColor="White"  Text="Les créateurs"/>
                 <Image Grid.Column="0" Grid.Row="1" Source="lanvin6.png" Aspect="AspectFit"/>
-                <Label Text="Baptiste Lanvin"  FontSize="20" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="2"/>
+                <Label Text="Baptiste Lanvin"  FontSize="20" HorizontalTextAlignment="Center" Grid.Column="0" TextColor="White" Grid.Row="2"/>
                 <Image Grid.Column="1" Grid.Row="1" Source="posseme.jpg" Aspect="AspectFit"/>
-                <Label Text="Baptiste Posseme" FontSize="20" HorizontalTextAlignment="Center" Grid.Column="1" Grid.Row="2"/>
+                <Label Text="Baptiste Posseme" FontSize="20" HorizontalTextAlignment="Center" Grid.Column="1" TextColor="White" Grid.Row="2"/>
 
             </Grid>
       
