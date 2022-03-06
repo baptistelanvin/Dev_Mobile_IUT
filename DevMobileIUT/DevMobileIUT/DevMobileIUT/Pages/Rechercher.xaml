@@ -10,6 +10,7 @@
                         <Label Text="{Binding Titre}"/>
                         <Label Text="{Binding Artiste}"/>
                         <Label Text="{Binding Annee}"/>
+                        <Label Text="{Binding Pochette}"/>
                     </FlexLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

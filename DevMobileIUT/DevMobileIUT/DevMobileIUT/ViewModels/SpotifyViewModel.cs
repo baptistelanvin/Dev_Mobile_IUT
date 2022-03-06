@@ -68,9 +68,8 @@ namespace DevMobileIUT.ViewModels
             }
         }
 
-        private async void search()
+        private async void search(string query)
         {
-            var query = "Zipette";
             ListOfResults = new ObservableCollection<Musique>();
             var search = await spotifyclient.Search.Item(new SearchRequest(SearchRequest.Types.Track, query));
             foreach (var item in search.Tracks.Items)
@@ -80,6 +79,7 @@ namespace DevMobileIUT.ViewModels
                     Titre = item.Name,
                     Artiste = item.Album.Artists[0].Name,
                     Annee = item.Album.ReleaseDate,
+                    Pochette = item.Album.Images[0].Url,
                 });
             }
         }
