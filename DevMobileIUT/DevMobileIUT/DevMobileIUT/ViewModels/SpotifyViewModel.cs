@@ -40,6 +40,7 @@ namespace DevMobileIUT.ViewModels
         {
             connectSpotifyAPI();
             initList();
+            search();
         }
 
         private async void initList()
@@ -77,6 +78,8 @@ namespace DevMobileIUT.ViewModels
                 ListOfResults.Add(new Musique()
                 {
                     Titre = item.Name,
+                    Artiste = item.Album.Artists[0].Name,
+                    Annee = item.Album.ReleaseDate,
                 });
             }
         }

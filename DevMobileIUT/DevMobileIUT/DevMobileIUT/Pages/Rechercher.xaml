@@ -8,6 +8,8 @@
                 <DataTemplate>
                     <FlexLayout>
                         <Label Text="{Binding Titre}"/>
+                        <Label Text="{Binding Artiste}"/>
+                        <Label Text="{Binding Annee}"/>
                     </FlexLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
