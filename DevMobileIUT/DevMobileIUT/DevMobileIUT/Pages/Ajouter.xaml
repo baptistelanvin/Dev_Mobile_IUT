@@ -3,10 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DevMobileIUT.Pages.Ajouter">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <FlexLayout>
+            <StackLayout>
+                <Label x:Name="labelName" Text="Pochette :" VerticalTextAlignment="Center" Margin="0,0,10,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
+                <ImageButton x:Name="pochettePicker" Source="globeNav.png" Clicked="OnPickImageClick" HorizontalOptions="End" HeightRequest="100" WidthRequest="100" MinimumHeightRequest="100" MinimumWidthRequest="100"/>
+                <Label x:Name="labelName1" Text="Titre :" VerticalTextAlignment="Center" Margin="0,0,10,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
+                <Entry WidthRequest="150" x:Name="songName" />
+                <Label x:Name="labelName2" Text="Album :" VerticalTextAlignment="Center" Margin="0,0,10,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
+                <Entry WidthRequest="150" x:Name="albumName" />
+                <Label x:Name="labelName3" Text="Artiste :" VerticalTextAlignment="Center" Margin="0,0,10,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
+                <Entry WidthRequest="150" x:Name="artistName" />
+                <Label x:Name="labelName4" Text="Date de sortie :" VerticalTextAlignment="Center" Margin="0,0,10,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
+                <DatePicker x:Name="songDate"/>
+            </StackLayout>
+            <Button Text="Ajouter" Clicked="OnButtonClicked"/>
+        </FlexLayout>
     </ContentPage.Content>
 </ContentPage>

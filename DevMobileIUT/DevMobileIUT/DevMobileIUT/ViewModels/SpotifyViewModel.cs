@@ -43,6 +43,11 @@ namespace DevMobileIUT.ViewModels
             search("zipette");
         }
 
+        public void addSong(Musique song)
+        {
+            ListOfMusiques.Add(song);
+        }
+
         private async void initList()
         {
             ListOfMusiques = new ObservableCollection<Musique>();
@@ -66,6 +71,7 @@ namespace DevMobileIUT.ViewModels
                 }
                 
             }
+
         }
 
         private async void search(string query)

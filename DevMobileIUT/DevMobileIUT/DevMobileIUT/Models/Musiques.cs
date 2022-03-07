@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
 
 namespace DevMobileIUT.Models
 {

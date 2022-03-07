@@ -5,22 +5,22 @@
        BackgroundColor="Black" Shell.TabBarTitleColor="White" Shell.TabBarUnselectedColor="Gray">
 
     <TabBar>
-        <Tab Title="Accueil" Icon="accueil.png">
+        <Tab Route="Home" Title="Accueil" Icon="accueil.png">
             <ShellContent>
                 <pages:Accueil></pages:Accueil>
             </ShellContent>
         </Tab>
-        <Tab Title="Top France" Icon="topfrance.png">
+        <Tab Route="Top" Title="Top France" Icon="topfrance.png">
             <ShellContent>
                 <pages:TopFrance></pages:TopFrance>
             </ShellContent>
         </Tab>
-        <Tab Title="Ajouter" Icon="ajouter.png">
+        <Tab Route="Add" Title="Ajouter" Icon="ajouter.png">
             <ShellContent>
                 <pages:Ajouter></pages:Ajouter>
             </ShellContent>
         </Tab>
-        <Tab Title="Rechercher" Icon="loupe.png">
+        <Tab Route="search" Title="Rechercher" Icon="loupe.png">
             <ShellContent >
                 <pages:Rechercher></pages:Rechercher>
             </ShellContent>
