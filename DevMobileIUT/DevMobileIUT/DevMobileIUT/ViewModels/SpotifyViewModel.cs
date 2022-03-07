@@ -40,7 +40,7 @@ namespace DevMobileIUT.ViewModels
         {
             connectSpotifyAPI();
             initList();
-            search();
+            search("zipette");
         }
 
         private async void initList()
@@ -72,20 +72,25 @@ namespace DevMobileIUT.ViewModels
         {
             ListOfResults = new ObservableCollection<Musique>();
             var search = await spotifyclient.Search.Item(new SearchRequest(SearchRequest.Types.Track, query));
+            int compteur = 1;
             foreach (var item in search.Tracks.Items)
             {
+                string anneeChaineEntière = item.Album.ReleaseDate;
                 ListOfResults.Add(new Musique()
                 {
+                    ID = compteur,
                     Titre = item.Name,
                     Artiste = item.Album.Artists[0].Name,
-                    Annee = item.Album.ReleaseDate,
+                    Annee = anneeChaineEntière.Substring(0, 4),
                     Pochette = item.Album.Images[0].Url,
                 });
+                compteur++;
+
             }
         }
 
 
-        private  void connectSpotifyAPI()
+        private void connectSpotifyAPI()
         {
             var config = SpotifyClientConfig.CreateDefault().WithAuthenticator(new ClientCredentialsAuthenticator("4ca27c28962d4d86b36f9e85d6f97fc0", "6eeef680576c4ddb829f8f20b4006809"));
             spotifyclient = new SpotifyClient(config);

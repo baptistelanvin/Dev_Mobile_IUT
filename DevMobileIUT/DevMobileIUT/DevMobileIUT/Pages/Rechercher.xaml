@@ -1,16 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DevMobileIUT.Pages.Rechercher">
+             x:Class="DevMobileIUT.Pages.Rechercher" Title="Rechercher" Shell.TitleColor="White">
     <ContentPage.Content>
-        <CollectionView ItemsSource="{Binding ListOfResults}">
+        <CollectionView ItemsSource="{Binding ListOfResults}" BackgroundColor="Black">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <FlexLayout>
-                        <Label Text="{Binding Titre}"/>
-                        <Label Text="{Binding Artiste}"/>
-                        <Label Text="{Binding Annee}"/>
-                        <Label Text="{Binding Pochette}"/>
+
+                        <Grid Margin="0, 10, 0, 10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="75" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="20" />
+                                <ColumnDefinition Width="75" />
+                                <ColumnDefinition Width="200" />
+                                <ColumnDefinition Width="40" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" Text="{Binding ID}"/>
+                            <Image WidthRequest="75" HeightRequest="75" Grid.Column="1" Aspect="AspectFit">
+                                <Image.Source>
+                                    <UriImageSource Uri="{Binding Pochette}"/>
+                                </Image.Source>
+                            </Image>
+
+                            <Grid Grid.Column="2">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="2*"/>
+                                    <RowDefinition Height="2*"/>
+                                </Grid.RowDefinitions>
+
+                                <Label Grid.Row="0" FontAttributes="Bold"  FontSize="14" TextColor="White" Text="{Binding Titre}"/>
+                                <Label Grid.Row="1">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span TextColor="White" Text="Titre - "/>
+                                            <Span TextColor="White" Text="{Binding Artiste}"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </Grid>
+
+
+                            <Label Grid.Column="3" VerticalOptions="Center" TextColor="White" Text="{Binding Annee}"/>
+
+                        </Grid>
                     </FlexLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
