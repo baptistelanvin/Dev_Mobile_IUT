@@ -20,6 +20,11 @@
                 <pages:Ajouter></pages:Ajouter>
             </ShellContent>
         </Tab>
+        <Tab Route="PersonalList" Title="Liste" Icon="loupe.png">
+            <ShellContent >
+                <pages:ListePerso></pages:ListePerso>
+            </ShellContent>
+        </Tab>
         <Tab Route="search" Title="Rechercher" Icon="loupe.png">
             <ShellContent >
                 <pages:Rechercher></pages:Rechercher>

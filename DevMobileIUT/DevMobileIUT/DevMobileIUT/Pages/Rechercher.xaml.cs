@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using DevMobileIUT.ViewModels;
+using DevMobileIUT.Models;
 
 namespace DevMobileIUT.Pages
 {
@@ -18,6 +19,23 @@ namespace DevMobileIUT.Pages
         {
             InitializeComponent();
             BindingContext = SpotifyViewModel.Instance;
+        }
+
+        void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Musique current = (e.CurrentSelection.FirstOrDefault() as Musique);
+            if (current == null)
+            {
+                return;
+            }
+            
+        }
+
+        void onTextChange(object sender, TextChangedEventArgs e)
+        {
+            SearchBar searchBar = (SearchBar)sender;
+
+            SpotifyViewModel.Instance.search(searchBar.Text);
         }
     }
 }

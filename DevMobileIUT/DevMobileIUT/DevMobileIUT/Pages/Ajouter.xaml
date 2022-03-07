@@ -15,8 +15,21 @@
                 <Entry WidthRequest="150" x:Name="artistName" />
                 <Label x:Name="labelName4" Text="Date de sortie :" VerticalTextAlignment="Center" Margin="0,0,10,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
                 <DatePicker x:Name="songDate"/>
+                <Button Text="Ajouter" Clicked="OnButtonClicked"/>
+                <CollectionView ItemsSource="{Binding ListOfAdds}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <FlexLayout>
+                                <Label Text="{Binding ID}"/>
+                                <Label Text="{Binding Titre}"/>
+                                <Label Text="{Binding Artiste}"/>
+                                <Label Text="{Binding Annee}"/>
+                                <Image Source="{Binding Pochette}"/>
+                            </FlexLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
             </StackLayout>
-            <Button Text="Ajouter" Clicked="OnButtonClicked"/>
         </FlexLayout>
     </ContentPage.Content>
 </ContentPage>

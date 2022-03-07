@@ -10,6 +10,7 @@ using DevMobileIUT.Models;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Collections.ObjectModel;
 
 namespace DevMobileIUT.Pages
 {
@@ -19,6 +20,7 @@ namespace DevMobileIUT.Pages
         private int compteur;
 
         private MediaFile Image { get; set; }
+
         public Ajouter()
         {
             InitializeComponent();
@@ -26,7 +28,8 @@ namespace DevMobileIUT.Pages
             albumName.Text = String.Empty;
             artistName.Text = String.Empty;
             songDate.Date = DateTime.Now;
-            compteur = 50;
+            compteur = 0;
+           
         }
 
 
@@ -75,9 +78,9 @@ namespace DevMobileIUT.Pages
             if (isFormValid)
             {
                 var spotifyViewModel = SpotifyViewModel.Instance;
-
                 Musique song = new Musique();
                 {
+                    song.Pochette = Image.Path;
                     song.Titre = songName.Text;
                     song.Album = albumName.Text;
                     song.Artiste = artistName.Text;
@@ -86,14 +89,13 @@ namespace DevMobileIUT.Pages
 
                 };
 
-                spotifyViewModel.addSong(song);
+                spotifyViewModel.AddSong(song);
                 pochettePicker.Source = "";
                 compteur += 1;
+                songDate.Date = DateTime.Now;
                 songName.Text = String.Empty;
                 albumName.Text = String.Empty;
                 artistName.Text = String.Empty;
-
-                await Shell.Current.GoToAsync($"//Top", true);
             }
         }
 

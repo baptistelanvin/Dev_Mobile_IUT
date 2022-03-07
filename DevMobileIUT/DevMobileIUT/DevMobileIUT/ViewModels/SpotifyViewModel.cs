@@ -36,16 +36,28 @@ namespace DevMobileIUT.ViewModels
             }
         }
 
+        public ObservableCollection<Musique> ListOfAdds
+        {
+            get
+            {
+                return GetValue<ObservableCollection<Musique>>();
+            }
+            set
+            {
+                SetValue(value);
+            }
+        }
+
         public SpotifyViewModel()
         {
             connectSpotifyAPI();
             initList();
-            search("zipette");
+            ListOfAdds = new ObservableCollection<Musique>();
         }
 
-        public void addSong(Musique song)
+        public void AddSong(Musique song)
         {
-            ListOfMusiques.Add(song);
+            ListOfAdds.Add(song);
         }
 
         private async void initList()
@@ -74,24 +86,30 @@ namespace DevMobileIUT.ViewModels
 
         }
 
-        private async void search(string query)
+        public async void search(string query)
         {
-            ListOfResults = new ObservableCollection<Musique>();
-            var search = await spotifyclient.Search.Item(new SearchRequest(SearchRequest.Types.Track, query));
-            int compteur = 1;
-            foreach (var item in search.Tracks.Items)
+            if(query == null || query == "")
             {
-                string anneeChaineEntière = item.Album.ReleaseDate;
-                ListOfResults.Add(new Musique()
+                ListOfResults.Clear();
+                new ObservableCollection<Musique>();
+            }
+            else { 
+                ListOfResults = new ObservableCollection<Musique>();
+                var search = await spotifyclient.Search.Item(new SearchRequest(SearchRequest.Types.Track, query));
+                int compteur = 1;
+                foreach (var item in search.Tracks.Items)
                 {
-                    ID = compteur,
-                    Titre = item.Name,
-                    Artiste = item.Album.Artists[0].Name,
-                    Annee = anneeChaineEntière.Substring(0, 4),
-                    Pochette = item.Album.Images[0].Url,
-                });
-                compteur++;
-
+                    string anneeChaineEntière = item.Album.ReleaseDate;
+                    ListOfResults.Add(new Musique()
+                    {
+                        ID = compteur,
+                        Titre = item.Name,
+                        Artiste = item.Album.Artists[0].Name,
+                        Annee = anneeChaineEntière.Substring(0, 4),
+                        Pochette = item.Album.Images[0].Url,
+                    });
+                    compteur++;
+                }
             }
         }
 
