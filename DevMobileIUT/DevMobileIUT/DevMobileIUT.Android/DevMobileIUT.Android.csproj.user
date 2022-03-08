@@ -4,5 +4,6 @@
     <SelectedDevice>Xiaomi M2007J17G</SelectedDevice>
     <ActiveDebugProfile>Xiaomi M2007J17G</ActiveDebugProfile>
     <DefaultDevice>pixel_5_-_api_30</DefaultDevice>
+    <AndroidDesignerPreferredTheme>MainTheme</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>
