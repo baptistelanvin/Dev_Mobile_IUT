@@ -1,34 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DevMobileIUT.Pages.Ajouter">
+             x:Class="DevMobileIUT.Pages.Ajouter" Shell.TitleColor="White" Title="Ajouter une musique">
     <ContentPage.Content>
-        <FlexLayout>
-            <StackLayout>
-                <Label x:Name="labelName" Text="Pochette :" VerticalTextAlignment="Center" Margin="0,0,10,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
-                <ImageButton x:Name="pochettePicker" Source="globeNav.png" Clicked="OnPickImageClick" HorizontalOptions="End" HeightRequest="100" WidthRequest="100" MinimumHeightRequest="100" MinimumWidthRequest="100"/>
-                <Label x:Name="labelName1" Text="Titre :" VerticalTextAlignment="Center" Margin="0,0,10,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
-                <Entry WidthRequest="150" x:Name="songName" />
-                <Label x:Name="labelName2" Text="Album :" VerticalTextAlignment="Center" Margin="0,0,10,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
-                <Entry WidthRequest="150" x:Name="albumName" />
-                <Label x:Name="labelName3" Text="Artiste :" VerticalTextAlignment="Center" Margin="0,0,10,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
-                <Entry WidthRequest="150" x:Name="artistName" />
-                <Label x:Name="labelName4" Text="Date de sortie :" VerticalTextAlignment="Center" Margin="0,0,10,0" TextColor="#666666" FontAttributes="bold" FontSize="18"/>
-                <DatePicker x:Name="songDate"/>
-                <Button Text="Ajouter" Clicked="OnButtonClicked"/>
-                <CollectionView ItemsSource="{Binding ListOfAdds}">
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <FlexLayout>
-                                <Label Text="{Binding ID}"/>
-                                <Label Text="{Binding Titre}"/>
-                                <Label Text="{Binding Artiste}"/>
-                                <Label Text="{Binding Annee}"/>
-                                <Image Source="{Binding Pochette}"/>
-                            </FlexLayout>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
+        <FlexLayout BackgroundColor="Black">
+            <StackLayout Margin="30,60, 30, 60" BackgroundColor="Black">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="110"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" x:Name="labelName" Text="Pochette :" HorizontalTextAlignment="Center" Margin="0,0,10,0" TextColor="White" FontAttributes="bold" FontSize="18"/>
+                    <ImageButton Grid.Row="1" x:Name="pochettePicker" HorizontalOptions="Center" Source="inserezImage.png" Clicked="OnPickImageClick"  HeightRequest="100" WidthRequest="100" MinimumHeightRequest="100" MinimumWidthRequest="100"/>
+                    <Label Grid.Row="2" x:Name="labelName1" Text="Titre :" HorizontalTextAlignment="Center" TextColor="White" FontAttributes="bold" FontSize="18"/>
+                    <Entry Grid.Row="3" WidthRequest="150" x:Name="songName" BackgroundColor="White" />
+                    <Label Grid.Row="4" x:Name="labelName2" Text="Album :" HorizontalTextAlignment="Center" TextColor="White" FontAttributes="bold" FontSize="18"/>
+                    <Entry Grid.Row="5"  WidthRequest="150" x:Name="albumName" BackgroundColor="White"/>
+                    <Label Grid.Row="6" x:Name="labelName3" Text="Artiste :" HorizontalTextAlignment="Center" TextColor="White" FontAttributes="bold" FontSize="18"/>
+                    <Entry Grid.Row="7"  WidthRequest="150" x:Name="artistName" BackgroundColor="White"/>
+                    <Label Grid.Row="8" x:Name="labelName4" Text="Date de sortie :" HorizontalTextAlignment="Center" TextColor="White" FontAttributes="bold" FontSize="18"/>
+                    <DatePicker Grid.Row="9" x:Name="songDate" HorizontalOptions="Center" BackgroundColor="White" TextColor="White"/>
+                    <Button Grid.Row="11" Text="Ajouter" TextColor="White" FontSize="18" FontAttributes="Bold" BackgroundColor="#0017E8" Clicked="OnButtonClicked"/>
+                </Grid>
             </StackLayout>
         </FlexLayout>
     </ContentPage.Content>
