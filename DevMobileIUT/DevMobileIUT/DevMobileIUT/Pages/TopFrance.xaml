@@ -22,7 +22,9 @@
             </Grid>
 
             <BoxView BackgroundColor="White" HeightRequest="3" HorizontalOptions="FillAndExpand"/>
-            <CollectionView ItemsSource="{Binding ListOfMusiques}">
+            <CollectionView ItemsSource="{Binding ListOfMusiques}"
+                SelectionChanged="OnCollectionViewSelectionChanged"
+                SelectionMode="Single">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <FlexLayout BackgroundColor="Black">

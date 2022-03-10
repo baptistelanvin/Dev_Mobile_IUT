@@ -1,4 +1,5 @@
-﻿using DevMobileIUT.ViewModels;
+﻿using DevMobileIUT.Models;
+using DevMobileIUT.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,17 @@ namespace DevMobileIUT.Pages
         {
             InitializeComponent();
             BindingContext = SpotifyViewModel.Instance;
+        }
+
+        async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Musique current = (e.CurrentSelection.FirstOrDefault() as Musique);
+            if (current == null)
+            {
+                return;
+            }
+    (sender as CollectionView).SelectedItem = null;
+            await Navigation.PushAsync(new DetailMusique(current));
         }
     }
 }
