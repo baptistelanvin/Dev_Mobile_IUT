@@ -14,6 +14,7 @@ namespace DevMobileIUT.Models
         public string Album { get; set; }
         public string Annee { get; set; }
         public string Pochette { get; set; }
+        public string ImageArtiste { get; set; }
 
     }
 }

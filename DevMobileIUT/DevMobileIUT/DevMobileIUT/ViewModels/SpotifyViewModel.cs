@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace DevMobileIUT.ViewModels
 {
@@ -51,8 +52,26 @@ namespace DevMobileIUT.ViewModels
         public SpotifyViewModel()
         {
             connectSpotifyAPI();
+            _ = this.initAsync();
             initList();
-            ListOfAdds = new ObservableCollection<Musique>();
+        }
+
+        private async Task initAsync()
+        {
+            SpotifyDatabase spotifyDB = await SpotifyDatabase.Instance;
+            if (spotifyDB.IsSpotifyDatabaseEmptyAsync().Result == true)
+            {
+               ListOfAdds = new ObservableCollection<Musique>();
+            }
+            else
+            {
+                ListOfAdds = new ObservableCollection<Musique>();
+                List<Musique> list = spotifyDB.GetMusiquesAsync().Result;
+                foreach (Musique musique in list)
+                {
+                    ListOfAdds.Add(musique);
+                }
+            }
         }
 
         public void AddSong(Musique song)
@@ -76,9 +95,9 @@ namespace DevMobileIUT.ViewModels
                         Titre = track.Name,
                         Album = track.Album.Name,
                         Artiste = track.Album.Artists[0].Name,
-                        Annee = anneeChaineEntière.Substring(0,4),
+                        Annee = anneeChaineEntière.Substring(0, 4),
                         Pochette = track.Album.Images[0].Url,
-                    });
+                    }) ;
                     compteur++;
                 }
                 

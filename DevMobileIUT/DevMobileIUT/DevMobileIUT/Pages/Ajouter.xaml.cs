@@ -78,18 +78,20 @@ namespace DevMobileIUT.Pages
             if (isFormValid)
             {
                 var spotifyViewModel = SpotifyViewModel.Instance;
-                Musique song = new Musique();
-                {
-                    song.Pochette = Image.Path;
-                    song.Titre = songName.Text;
-                    song.Album = albumName.Text;
-                    song.Artiste = artistName.Text;
-                    song.Annee = songDate.Date.Year.ToString();
-                    song.ID = compteur + 1;
+                SpotifyDatabase spotifyDB = await SpotifyDatabase.Instance;
+                Musique song = new Musique 
+                { 
+                    Pochette = Image.Path,
+                    Titre = songName.Text,
+                    Album = albumName.Text,
+                    Artiste = artistName.Text,
+                    Annee = songDate.Date.Year.ToString(),
+                    ID = compteur + 1,
 
                 };
 
                 spotifyViewModel.AddSong(song);
+                await spotifyDB.AddMusiqueAsync(song);
                 pochettePicker.Source = "";
                 compteur += 1;
                 songDate.Date = DateTime.Now;

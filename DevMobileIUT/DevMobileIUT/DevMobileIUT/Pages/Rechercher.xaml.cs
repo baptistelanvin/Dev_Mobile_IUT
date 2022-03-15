@@ -21,14 +21,15 @@ namespace DevMobileIUT.Pages
             BindingContext = SpotifyViewModel.Instance;
         }
 
-        void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
+        async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Musique current = (e.CurrentSelection.FirstOrDefault() as Musique);
             if (current == null)
             {
                 return;
             }
-            
+         (sender as CollectionView).SelectedItem = null;
+            await Navigation.PushAsync(new DetailMusique(current));
         }
 
         void onTextChange(object sender, TextChangedEventArgs e)

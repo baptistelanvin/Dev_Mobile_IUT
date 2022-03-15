@@ -5,6 +5,7 @@
     <ContentPage.Content>
         <FlexLayout>
             <Label Text="{Binding Titre}"></Label>
+            <Label Text="{Binding ImageArtiste}"></Label>
         </FlexLayout>
     </ContentPage.Content>
 </ContentPage>
