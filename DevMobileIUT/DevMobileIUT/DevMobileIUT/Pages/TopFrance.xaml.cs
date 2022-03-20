@@ -27,7 +27,8 @@ namespace DevMobileIUT.Pages
             {
                 return;
             }
-         (sender as CollectionView).SelectedItem = null;
+
+            (sender as CollectionView).SelectedItem = null;
             await Navigation.PushAsync(new DetailMusique(current));
         }
     }

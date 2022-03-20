@@ -25,7 +25,20 @@ namespace DevMobileIUT.ViewModels
                 SetValue(value);
             }
         }
+
         public ObservableCollection<Musique> ListOfResults
+        {
+            get
+            {
+                return GetValue<ObservableCollection<Musique>>();
+            }
+            set
+            {
+                SetValue(value);
+            }
+        }
+
+        public ObservableCollection<Musique> ListOfTopTracks
         {
             get
             {
@@ -89,6 +102,8 @@ namespace DevMobileIUT.ViewModels
                 if (item.Track is FullTrack track)
                 {
                     string anneeChaineEntière = track.Album.ReleaseDate;
+                    string ArtisteId = track.Album.Artists[0].Id;
+                    FullArtist artist = await spotifyclient.Artists.Get(ArtisteId);
                     ListOfMusiques.Add(new Musique()
                     {
                         ID = compteur,
@@ -97,11 +112,65 @@ namespace DevMobileIUT.ViewModels
                         Artiste = track.Album.Artists[0].Name,
                         Annee = anneeChaineEntière.Substring(0, 4),
                         Pochette = track.Album.Images[0].Url,
-                    }) ;
+                        IdArtiste = ArtisteId,
+                    });
                     compteur++;
                 }
-                
             }
+        }
+
+        public async void listTopTracks(string ArtisteId)
+        {
+            if (ArtisteId == null || ArtisteId == "")
+            {
+                ListOfTopTracks.Clear();
+                new ObservableCollection<Musique>();
+            }
+            else
+            {
+                ListOfTopTracks = new ObservableCollection<Musique>();
+                ArtistsTopTracksRequest country_code = new ArtistsTopTracksRequest("FR");
+                ArtistsTopTracksResponse items = await spotifyclient.Artists.GetTopTracks(ArtisteId, country_code);
+                int compteurTopTrack = 1;
+                foreach (var objet in items.Tracks)
+                {
+                    FullArtist artist = await spotifyclient.Artists.Get(ArtisteId);
+                    string objetAnnee = objet.Album.ReleaseDate;
+                    if (compteurTopTrack <= 5)
+                    {
+                        ListOfTopTracks.Add(new Musique()
+                        {
+                            ID = compteurTopTrack,
+                            Titre = objet.Name,
+                            Artiste = objet.Album.Artists[0].Name,
+                            Annee = objetAnnee.Substring(0, 4),
+                            Pochette = objet.Album.Images[0].Url,
+                            IdArtiste = ArtisteId,
+                        });
+                        compteurTopTrack++;
+                    }
+                }
+            }
+        }
+
+        public string getArtisteImage(string ArtisteId)
+        {
+            FullArtist artist = spotifyclient.Artists.Get(ArtisteId).Result;
+            return artist.Images[0].Url;
+
+        }
+
+        public string getNbAbonnement(string ArtisteId)
+        {
+            FullArtist artist = spotifyclient.Artists.Get(ArtisteId).Result;
+            return artist.Followers.Total.ToString();
+        }
+
+
+        public string getArtisteNom(string ArtisteId)
+        {
+            FullArtist artist = spotifyclient.Artists.Get(ArtisteId).Result;
+            return artist.Name;
 
         }
 
@@ -119,6 +188,8 @@ namespace DevMobileIUT.ViewModels
                 foreach (var item in search.Tracks.Items)
                 {
                     string anneeChaineEntière = item.Album.ReleaseDate;
+                    string ArtisteId = item.Album.Artists[0].Id;
+                    FullArtist artist = await spotifyclient.Artists.Get(ArtisteId);
                     ListOfResults.Add(new Musique()
                     {
                         ID = compteur,
@@ -126,6 +197,8 @@ namespace DevMobileIUT.ViewModels
                         Artiste = item.Album.Artists[0].Name,
                         Annee = anneeChaineEntière.Substring(0, 4),
                         Pochette = item.Album.Images[0].Url,
+                        ImageArtiste = artist.Images[0].Url,
+                        IdArtiste = ArtisteId,
                     });
                     compteur++;
                 }

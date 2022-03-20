@@ -26,14 +26,22 @@
                     <Label Grid.Row="0" x:Name="labelName" Text="Pochette :" HorizontalTextAlignment="Center" Margin="0,0,10,0" TextColor="White" FontAttributes="bold" FontSize="18"/>
                     <ImageButton Grid.Row="1" x:Name="pochettePicker" HorizontalOptions="Center" Source="inserezImage.png" Clicked="OnPickImageClick"  HeightRequest="100" WidthRequest="100" MinimumHeightRequest="100" MinimumWidthRequest="100"/>
                     <Label Grid.Row="2" x:Name="labelName1" Text="Titre :" HorizontalTextAlignment="Center" TextColor="White" FontAttributes="bold" FontSize="18"/>
-                    <Entry Grid.Row="3" WidthRequest="150" x:Name="songName" BackgroundColor="White" />
+                    <Frame Grid.Row="3" BorderColor="White" Padding="1" CornerRadius="5">
+                        <Entry WidthRequest="150" x:Name="songName" BackgroundColor="Black" TextColor="White" />
+                    </Frame>
                     <Label Grid.Row="4" x:Name="labelName2" Text="Album :" HorizontalTextAlignment="Center" TextColor="White" FontAttributes="bold" FontSize="18"/>
-                    <Entry Grid.Row="5"  WidthRequest="150" x:Name="albumName" BackgroundColor="White"/>
+                    <Frame  Grid.Row="5" BorderColor="White" Padding="1" CornerRadius="5" >
+                        <Entry  WidthRequest="150" x:Name="albumName" BackgroundColor="Black" TextColor="White"/>
+                    </Frame>
                     <Label Grid.Row="6" x:Name="labelName3" Text="Artiste :" HorizontalTextAlignment="Center" TextColor="White" FontAttributes="bold" FontSize="18"/>
-                    <Entry Grid.Row="7"  WidthRequest="150" x:Name="artistName" BackgroundColor="White"/>
+                    <Frame Grid.Row="7" BorderColor="White" Padding="1" CornerRadius="5" >
+                        <Entry BackgroundColor="Black" WidthRequest="150" TextColor="White" x:Name="artistName"/>
+                    </Frame>
                     <Label Grid.Row="8" x:Name="labelName4" Text="Date de sortie :" HorizontalTextAlignment="Center" TextColor="White" FontAttributes="bold" FontSize="18"/>
-                    <DatePicker Grid.Row="9" x:Name="songDate" HorizontalOptions="Center" BackgroundColor="White" TextColor="White"/>
-                    <Button Grid.Row="11" Text="Ajouter" TextColor="White" FontSize="18" FontAttributes="Bold" BackgroundColor="#0017E8" Clicked="OnButtonClicked"/>
+                    <Frame Grid.Row="9" CornerRadius="5" WidthRequest="70" BackgroundColor="Black" BorderColor="White" Padding="1">
+                        <DatePicker x:Name="songDate" HorizontalOptions="Center"  BackgroundColor="Black" TextColor="White"/>
+                    </Frame>
+                    <Button CornerRadius="10" Grid.Row="11" Text="Ajouter" TextColor="White" FontSize="18" FontAttributes="Bold" BackgroundColor="#0017E8" Clicked="OnButtonClicked"/>
                 </Grid>
             </StackLayout>
         </FlexLayout>
