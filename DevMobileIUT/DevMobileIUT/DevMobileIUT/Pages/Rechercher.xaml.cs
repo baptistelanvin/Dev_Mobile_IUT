@@ -21,22 +21,22 @@ namespace DevMobileIUT.Pages
             BindingContext = SpotifyViewModel.Instance;
         }
 
-        async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
+        async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e) //Méthode pour afficher le détail d'un artiste lorsque l'on clique sur un titre
         {
-            Musique current = (e.CurrentSelection.FirstOrDefault() as Musique);
+            Musique current = (e.CurrentSelection.FirstOrDefault() as Musique); 
             if (current == null)
             {
                 return;
             }
-         (sender as CollectionView).SelectedItem = null;
-            await Navigation.PushAsync(new DetailMusique(current));
+         (sender as CollectionView).SelectedItem = null; 
+            await Navigation.PushAsync(new DetailArtiste(current)); //On affiche la page de detail
         }
 
-        void onTextChange(object sender, TextChangedEventArgs e)
+        void onTextChange(object sender, TextChangedEventArgs e) //On appelle ici la fonction search() qui permet de faire une recherche via l'API Spotify
         {
             SearchBar searchBar = (SearchBar)sender;
 
-            SpotifyViewModel.Instance.search(searchBar.Text);
+            SpotifyViewModel.Instance.search(searchBar.Text); //Appel de la fonction 
         }
     }
 }

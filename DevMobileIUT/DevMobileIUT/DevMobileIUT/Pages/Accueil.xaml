@@ -19,7 +19,7 @@
                 <Image Grid.Column="0" WidthRequest="100" Grid.Row="0" Source="logo1.png"/>
                 <Label Grid.Column="1" Grid.Row="0" FontSize="50" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#0017E8">Spofity</Label>
             </Grid>
-            <Label TextColor="White" FontSize="16" Margin="20, 0,20,0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum posuere velit eget volutpat. Mauris ut ultricies leo. Ut luctus nisi in dictum accumsan. Pellentesque habitant morbi tristique rerit, bibendum turpis sed, pharetra dolor.</Label>
+            <Label TextColor="White" FontSize="16" Margin="20, 0,20,0">Cette application est un projet qui est une prise en main de Xamarin Forms. Cette application est connectée à Spotify en temps réel.</Label>
             
             <Grid>
                 <Grid.RowDefinitions>

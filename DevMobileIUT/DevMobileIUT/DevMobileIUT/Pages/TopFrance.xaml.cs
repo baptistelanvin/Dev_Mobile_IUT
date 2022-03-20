@@ -20,7 +20,7 @@ namespace DevMobileIUT.Pages
             BindingContext = SpotifyViewModel.Instance;
         }
 
-        async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
+        async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e) //Méthode pour afficher le détail d'un artiste lorsque l'on clique sur un titre
         {
             Musique current = (e.CurrentSelection.FirstOrDefault() as Musique);
             if (current == null)
@@ -29,7 +29,7 @@ namespace DevMobileIUT.Pages
             }
 
             (sender as CollectionView).SelectedItem = null;
-            await Navigation.PushAsync(new DetailMusique(current));
+            await Navigation.PushAsync(new DetailArtiste(current)); //On affiche la page de detail
         }
     }
 }

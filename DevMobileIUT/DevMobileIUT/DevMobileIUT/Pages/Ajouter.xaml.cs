@@ -21,7 +21,7 @@ namespace DevMobileIUT.Pages
 
         private MediaFile Image { get; set; }
 
-        public Ajouter()
+        public Ajouter()  //L'initialisation des éléments de l'ajout
         {
             InitializeComponent();
             songName.Text = String.Empty;
@@ -33,7 +33,7 @@ namespace DevMobileIUT.Pages
         }
 
 
-        private async void OnPickImageClick(object sender, EventArgs args)
+        private async void OnPickImageClick(object sender, EventArgs args) //Méthode permettant de sélectionner une image dans la galerie du téléphone.
         {
 
             this.Image = await CrossMedia.Current.PickPhotoAsync();
@@ -50,10 +50,10 @@ namespace DevMobileIUT.Pages
 
         }
 
-        public async void OnButtonClicked(object sender, EventArgs args)
+        public async void OnButtonClicked(object sender, EventArgs args) //Méthode qui permet d'ajouter un élément dans la liste personnelle. 
         {
 
-            bool isFormValid = true;
+            bool isFormValid = true; //booléen permettant de vérifier que l'ajout est valide
 
             if (songName.Text == String.Empty)
             {
@@ -75,11 +75,11 @@ namespace DevMobileIUT.Pages
                 isFormValid = false;
             }
 
-            if (isFormValid)
+            if (isFormValid) //on ajoute seulement si tous les champs sont remplis
             {
                 var spotifyViewModel = SpotifyViewModel.Instance;
                 SpotifyDatabase spotifyDB = await SpotifyDatabase.Instance;
-                Musique song = new Musique 
+                Musique song = new Musique  //On crée l'objet à ajouter ici
                 { 
                     Pochette = Image.Path,
                     Titre = songName.Text,
@@ -90,9 +90,9 @@ namespace DevMobileIUT.Pages
 
                 };
 
-                spotifyViewModel.AddSong(song);
-                await spotifyDB.AddMusiqueAsync(song);
-                pochettePicker.Source = "";
+                spotifyViewModel.AddSong(song); //On ajoute la musique à la liste personnelle
+                await spotifyDB.AddMusiqueAsync(song); //On ajoute la musique en base de données
+                pochettePicker.Source = ""; //On réinitialise les éléments
                 compteur += 1;
                 songDate.Date = DateTime.Now;
                 songName.Text = String.Empty;
