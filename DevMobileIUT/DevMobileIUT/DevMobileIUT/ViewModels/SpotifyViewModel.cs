@@ -103,7 +103,6 @@ namespace DevMobileIUT.ViewModels
                 {
                     string anneeChaineEntière = track.Album.ReleaseDate;
                     string ArtisteId = track.Album.Artists[0].Id;
-                    FullArtist artist = await spotifyclient.Artists.Get(ArtisteId);
                     ListOfMusiques.Add(new Musique()
                     {
                         ID = compteur,
@@ -189,7 +188,6 @@ namespace DevMobileIUT.ViewModels
                 {
                     string anneeChaineEntière = item.Album.ReleaseDate;
                     string ArtisteId = item.Album.Artists[0].Id;
-                    FullArtist artist = await spotifyclient.Artists.Get(ArtisteId);
                     ListOfResults.Add(new Musique()
                     {
                         ID = compteur,
@@ -197,7 +195,6 @@ namespace DevMobileIUT.ViewModels
                         Artiste = item.Album.Artists[0].Name,
                         Annee = anneeChaineEntière.Substring(0, 4),
                         Pochette = item.Album.Images[0].Url,
-                        ImageArtiste = artist.Images[0].Url,
                         IdArtiste = ArtisteId,
                     });
                     compteur++;
