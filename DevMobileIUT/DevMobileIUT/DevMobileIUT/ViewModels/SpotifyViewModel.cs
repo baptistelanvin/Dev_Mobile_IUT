@@ -198,7 +198,7 @@ namespace DevMobileIUT.ViewModels
 
         private void connectSpotifyAPI() //Méthode permettant la connexion à l'API de Spotify
         {
-            var config = SpotifyClientConfig.CreateDefault().WithAuthenticator(new ClientCredentialsAuthenticator("4ca27c28962d4d86b36f9e85d6f97fc0", "6eeef680576c4ddb829f8f20b4006809"));
+            var config = SpotifyClientConfig.CreateDefault().WithAuthenticator(new ClientCredentialsAuthenticator("CLIENT_ID", "CLIENT_SECRET"));
             spotifyclient = new SpotifyClient(config);
             
         }
